@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2009 Dave Gamble
+  cjson.h to c3 binding file.
  
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
