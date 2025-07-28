@@ -49,8 +49,8 @@ struct Cjson {
 
 	ZString string;				/* The item's name string, if this item is the child of, or is in the list of subitems of an object. */
 } 
-def Malloc_fn =fn void(usz sz);
-def Free_fn=fn void(void* ptr);
+alias Malloc_fn =fn void(usz sz);
+alias Free_fn=fn void(void* ptr);
 struct Cjson_Hooks {
       //void *(*malloc_fn)(size_t sz);
       Malloc_fn* malloc_fn;

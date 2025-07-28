@@ -51,7 +51,7 @@ fn void dofile(String filename)
     long len;
     ZString data;
     
-    f=libc::fopen(filename.zstr_copy(),"rb");
+    f=libc::fopen(filename.zstr_tcopy(),"rb");
     libc::fseek(f,0,libc::SEEK_END);
     len=libc::ftell(f);
     libc::fseek(f,0,libc::SEEK_SET);
@@ -84,7 +84,7 @@ fn void create_object()
     ZString out;
     int i;
     
-    ZString* strings=&&ZString[*]{"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+    ZString* strings=&&(ZString[*]){"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
     
     int[3][3] numbers={{0,-1,0},{1,0,0},{0,0,1}};
 
